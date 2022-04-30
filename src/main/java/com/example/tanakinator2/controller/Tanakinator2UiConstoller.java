@@ -17,7 +17,8 @@ public class Tanakinator2UiConstoller {
 
     @GetMapping(path = "")
     public String home(Model model) {
-        model.addAttribute("message", "ahi");
+        String message = dao.getMessage();
+        model.addAttribute("message", message);
         return "index";
     }
 }
